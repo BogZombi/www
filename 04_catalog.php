@@ -167,7 +167,8 @@
 									<option value="7">7000</option>
 									<option value="8">8000</option>
 								</select>
-								<select class="select_4">
+								<?php $years = $_POST['years'] ?>
+								<select class="select_4" value = "$years">
 									<option value="0">To</option>
 									<option value="1">1000</option>
 									<option value="2">2000</option>
@@ -193,7 +194,7 @@
 									<option value="7">7000</option>
 									<option value="8">8000</option>
 								</select>
-								<select class="select_4">
+								<select class="select_4" value = "4">
 									<option value="0">To</option>
 									<option value="1">1000</option>
 									<option value="2">2000</option>

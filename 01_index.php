@@ -226,7 +226,7 @@
 									<option value="7">7000</option>
 									<option value="8">8000</option>
 								</select>
-								<select class="select_2">
+								<select class="select_2" id = "sel5">
 									<option value="0">To</option>
 									<option value="1">1000</option>
 									<option value="2">2000</option>
@@ -236,7 +236,6 @@
 									<option value="6">6000</option>
 									<option value="7">7000</option>
 									<option value="8">8000</option>
-								</select>
 								<div class="clear"></div>
 							</div>
 							<div class="chb_wrapper">
