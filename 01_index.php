@@ -44,7 +44,7 @@
 		<div id="header">
 			<div class="top_info">
 				<div class="logo">
-					<a href="#"><img src="images/Logo.png"></a>
+					<a href="#">Range<span>Auto</span></a>
 				</div>
 				<div class="header_contacts">
 					<div class="phone"> +38(099) - 023 - 9743</div>
@@ -65,7 +65,7 @@
 							<li><a href="10_page.html">About Us</a></li>
 							<li><a href="08_blog.html">Blog</a></li>
 							<li><a href="#">News</a></li>
-							<li><a href="#">For Salers</a></li>
+							<li><a href="07_add.php">For Salers</a></li>
 							<li><a href="02_contacts.html">Contacts</a></li>
 						</ul>
 					</div>
@@ -84,12 +84,8 @@
 					<div class="slider_wrapper">
 						<div class="home_slider">
 							<div class="slider slider_1">
-								<div class="slide">
-								<img src="images/placeholders/620x425.gif" alt=""/>
-									<div class="description">
-										<h2 class="title">
-										<?php
-										require_once 'connection.php';
+							<?php 
+					require_once 'connection.php';
 										$link = mysqli_connect($host, $user, $password, $database) or die("Ошибка " . mysqli_error($link)); 
      
 										$query ="SELECT * FROM Cars";
@@ -98,80 +94,28 @@
 										if($result)
 										{
    											$rows = mysqli_num_rows($result); // количество полученных строк
-     
-										    for ($i = 0 ; $i < $rows ; ++$i)
-										    {
-										        $row = mysqli_fetch_row($result);
-										        
-										    }
-										     echo "$row[2] $row[0] $row[1]";
-    											mysqli_free_result($result);
-											}
-											mysqli_close($link);
-										 ?>
-										 	
+   											$number = 0;
+     										for ($i = 0 ; $i < 5 ; ++$i){
+										    $row = mysqli_fetch_array($result);
+						echo "<div class='slide'>
+								<img src='images/placeholders/620x425.gif' alt=''/>
+									<div class='description'>
+										<h2 class='title'>
+										$row[0]  $row[1]						 	
 										 </h2>
-										<p class="desc"><span><strong>Miles: </strong>25,000</span><span><strong>Engine: </strong>2.6</span></p>
-										<div class="price">$ 32 200</div>
+										<p class='desc'><span><strong>Miles: </strong>$row[4]</span><span><strong>Engine: </strong>2.6</span></p>
+										<div class='price'>$ $row[3]</div>
 
 										
 									</div>
 								
-								</div>
-								<div class="slide">
-									<img src="images/placeholders/620x425.gif" alt=""/>
-									<div class="description">
-										<h2 class="title"><?php
-										require_once 'connection.php';
-										$link = mysqli_connect($host, $user, $password, $database) or die("Ошибка " . mysqli_error($link)); 
-     
-$query ="SELECT * FROM Cars";
- 
-$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
-if($result)
-{
-    $rows = mysqli_num_rows($result); // количество полученных строк
-     
-    for ($i = 0 ; $i < 1 ; ++$i)
-    {
-        $row = mysqli_fetch_row($result);
-        
-    }
-     echo "$row[2] $row[0] $row[1]";
-    // очищаем результат
-    mysqli_free_result($result);
-}
- 
-mysqli_close($link);
-										 ?></h2>
-										<p class="desc"><span><strong>Miles: </strong>25,000</span><span><strong>Engine: </strong>2.6</span></p>
-										<div class="price">$ 32 200</div>
-									</div>
-								</div>
-								<div class="slide">
-									<img src="images/placeholders/620x425.gif" alt=""/>
-									<div class="description">
-										<h2 class="title">2002 Subaru Impreza</h2>
-										<p class="desc"><span><strong>Miles: </strong>25,000</span><span><strong>Engine: </strong>2.6</span></p>
-										<div class="price">$ 32 200</div>
-									</div>
-								</div>
-								<div class="slide">
-									<img src="images/placeholders/620x425.gif" alt=""/>
-									<div class="description">
-										<h2 class="title">2012 Cadillac LaBaron</h2>
-										<p class="desc"><span><strong>Miles: </strong>25,000</span><span><strong>Engine: </strong>2.6</span></p>
-										<div class="price">$ 32 200</div>
-									</div>
-								</div>
-								<div class="slide">
-									<img src="images/placeholders/620x425.gif" alt=""/>
-									<div class="description">
-										<h2 class="title">2012 Ferrari Maranello 320</h2>
-										<p class="desc"><span><strong>Miles: </strong>25,000</span><span><strong>Engine: </strong>2.6</span></p>
-										<div class="price">$ 32 200</div>
-									</div>
-								</div>
+								</div>";
+					}
+											mysqli_free_result($result);
+											mysqli_close($link); 
+				}
+						?>
+								
 							</div>
 						</div>
 					</div>
@@ -297,90 +241,32 @@ mysqli_close($link);
 				<div class="recent">
 					<h2><strong>Recent</strong> listings</h2>
 					<div class="recent_carousel">
-						<div class="slide">
-							<a href="#">
-								<img src="images/placeholders/220x164.gif" alt=""/>
-								<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-								<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
+					<?php 
+					require_once 'connection.php';
+										$link = mysqli_connect($host, $user, $password, $database) or die("Ошибка " . mysqli_error($link)); 
+     
+										$query ="SELECT * FROM Cars";
+ 
+										$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
+										if($result)
+										{
+   											$rows = mysqli_num_rows($result); // количество полученных строк
+   											$number = 0;
+     										for ($i = 0 ; $i < $rows ; ++$i){
+										    $row = mysqli_fetch_array($result);
+						echo "<div class='slide'>
+							<a href='06_product_page.html'>
+								<img src='images/placeholders/220x164.gif' alt=''/>
+								<div class='description'>Registration $row[2]<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>$row[4] Miles</div>
+								<div class='title'>$row[0] $row[1] <span class='price'>$ $row[3]</span></div>
 							</a>
-						</div>
-						<div class="slide">
-							<a href="#">
-								<img src="images/placeholders/220x164.gif" alt=""/>
-								<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-								<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-							</a>
-						</div>
-						<div class="slide">
-							<a href="#">
-								<img src="images/placeholders/220x164.gif" alt=""/>
-								<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-								<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-							</a>
-						</div>
-						<div class="slide">
-							<a href="#">
-								<img src="images/placeholders/220x164.gif" alt=""/>
-								<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-								<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-							</a>
-						</div>
-						<div class="slide">
-							<a href="#">
-								<img src="images/placeholders/220x164.gif" alt=""/>
-								<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-								<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-							</a>
-						</div>
-						<div class="slide">
-							<a href="#">
-								<img src="images/placeholders/220x164.gif" alt=""/>
-								<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-								<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-							</a>
-						</div>
-						<div class="slide">
-							<a href="#">
-								<img src="images/placeholders/220x164.gif" alt=""/>
-								<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-								<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-							</a>
-						</div>
-						<div class="slide">
-							<a href="#">
-								<img src="images/placeholders/220x164.gif" alt=""/>
-								<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-								<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-							</a>
-						</div>
-						<div class="slide">
-							<a href="#">
-								<img src="images/placeholders/220x164.gif" alt=""/>
-								<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-								<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-							</a>
-						</div>
-						<div class="slide">
-							<a href="#">
-								<img src="images/placeholders/220x164.gif" alt=""/>
-								<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-								<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-							</a>
-						</div>
-						<div class="slide">
-							<a href="#">
-								<img src="images/placeholders/220x164.gif" alt=""/>
-								<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-								<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-							</a>
-						</div>
-						<div class="slide">
-							<a href="#">
-								<img src="images/placeholders/220x164.gif" alt=""/>
-								<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-								<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-							</a>
-						</div>
+						</div>";
+					}
+											mysqli_free_result($result);
+											mysqli_close($link); 
+				}
+						?>
+						
 					</div>
 				</div>
 				<div class="banners">
@@ -396,7 +282,7 @@ mysqli_close($link);
 							<p class="title"><strong>Want</strong> to sell a car?</p>
 							<p class="desc">200.000 visitors every day. Add your offer now!</p>
 						</div>
-						<a href="#">Sell</a>
+						<a href="07_add.php">Sell</a>
 					</div>
 				</div>
 				<div class="wrapper_2">
@@ -405,21 +291,21 @@ mysqli_close($link);
 							<h2><strong>Recent</strong> from the blog</h2>
 							<div class="post_block">
 								<a href="#" class="thumb"><img src="images/placeholders/180x135.gif" alt=""/></a>
-								<h5><a href="#">THE IMPORTANCE OF LUXURY SUV SALES EXPLAINED</a></h5>
+								<h5><a href="09_blog_single.html">HOW I BOUGHT AND SOLD CARS BEFORE AND NOW</a></h5>
 								<div class="date">November 1, 2012 </div>
-								<div class="post"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit... Aliquam hendrerit sagittis urna,</p></div>
+								<div class="post"><p>Borsch is the famous soup in many Ukraine families, as well as many Eastern and Central European countries. </p></div>
 							</div>
 							<div class="post_block">
 								<a href="#" class="thumb"><img src="images/placeholders/180x135.gif" alt=""/></a>
-								<h5><a href="#">THE IMPORTANCE OF LUXURY SUV SALES EXPLAINED</a></h5>
-								<div class="date">November 1, 2012 </div>
-								<div class="post"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit... Aliquam hendrerit sagittis urna,</p></div>
+								<h5><a href="#">HOW I BOUGHT AND SOLD CARS BEFORE AND NOW</a></h5>
+								<div class="date">May 1, 2018 </div>
+								<div class="post"><p>Borsch is the famous soup in many Ukraine families, as well as many Eastern and Central European countries. </p></div>
 							</div>
 							<div class="post_block last">
 								<a href="#" class="thumb"><img src="images/placeholders/180x135.gif" alt=""/></a>
-								<h5><a href="#">THE IMPORTANCE OF LUXURY SUV SALES EXPLAINED</a></h5>
-								<div class="date">November 1, 2012 </div>
-								<div class="post"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit... Aliquam hendrerit sagittis urna,</p></div>
+								<h5><a href="#">HOW I BOUGHT AND SOLD CARS BEFORE AND NOW</a></h5>
+								<div class="date">May 1, 2018 </div>
+								<div class="post"><p>Borsch is the famous soup in many Ukraine families, as well as many Eastern and Central European countries. </p></div>
 							</div>
 							<div class="clear"></div>
 						</div>
@@ -434,7 +320,7 @@ mysqli_close($link);
 						   		<div class="tabs_carousel">
 						   			<div class="slide">
 										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">St. Louis Auto Dealers</a>
+										<a href="#" class="title">St. Louis Auto Auction</a>
 									</div>
 									<div class="slide">
 										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
@@ -493,9 +379,9 @@ mysqli_close($link);
 										<img src="images/placeholders/180x135.gif" alt=""/>
 									</a>
 									<h5><a href="#">UNOFFICIAL PORSCHE 918 SPYDER PRICING POPS UP</a></h5>
-									<div class="date">November 1, 2012 </div>
+									<div class="date">May 1, 2018 </div>
 									<div class="post">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit... </p>
+										<p>Borsch is the famous soup in many Ukraine families, as well as many Eastern and Central European countries... </p>
 									</div>
 								</div>
 								<div class="news_box bottom">
@@ -503,9 +389,9 @@ mysqli_close($link);
 										<img src="images/placeholders/180x135.gif" alt=""/>
 									</a>
 									<h5><a href="#">UNOFFICIAL PORSCHE 918 SPYDER PRICING POPS UP</a></h5>
-									<div class="date">November 1, 2012 </div>
+									<div class="date">May 1, 2018 </div>
 									<div class="post">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit... </p>
+										<p>Borsch is the famous soup in many Ukraine families, as well as many Eastern and Central European countries... </p>
 									</div>
 								</div>
 								<div class="all_wrapper"><a href="#" class="all_news">All news</a></div>
@@ -536,8 +422,7 @@ mysqli_close($link);
 					<div class="f_widget first">
 						<h3><strong>About</strong> us</h3>
 						<a href="#" class="footer_logo">RagneAuto</a>
-						<p>Lorem ipsum dolor sit amet, cons ectetur adipisicing elit, sed do eiusmod tempor.
-Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eius  mod tempor incididunt ut.</p>
+						<p>Borsch is the famous soup in many Russian families, as well as many Eastern and Central European countries. The recipes of borsch vary, but vegetables (mainly beet) and sour cream are always the main ingredients. </p>
 					</div>
 					<div class="f_widget divide second">
 						<h3><strong>Open</strong> hours auction</h3>
@@ -623,7 +508,7 @@ Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eius  mod temp
 				</div>
 			</div>
 			<div class="copyright_wrapper">
-				<div class="copyright">&copy; 2018 Auto Sale. All Rights Reserved.</div>
+				<div class="copyright">&copy; 2018 Auto Sale. All Rights Reserved. Bogdan^_^</div>
 			</div>
 		</div>
 	<!--EOF FOOTER-->

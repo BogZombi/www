@@ -46,7 +46,7 @@
 		<div id="header">
 			<div class="top_info">
 				<div class="logo">
-					<a href="#">Auto<span>Dealer</span></a>
+					<a href="#">Range<span>Auto</span></a>
 				</div>
 				<div class="header_contacts">
 					<div class="phone">+1 (800) 455-55-95</div>
@@ -67,7 +67,7 @@
 							<li><a href="10_page.html">About Us</a></li>
 							<li><a href="08_blog.html">Blog</a></li>
 							<li><a href="#">News</a></li>
-							<li><a href="#">For Salers</a></li>
+							<li><a href="07_add.php">For Salers</a></li>
 							<li><a href="02_contacts.html">Contacts</a></li>
 						</ul>
 					</div>

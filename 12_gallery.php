@@ -45,11 +45,11 @@
 		<div id="header">
 			<div class="top_info">
 				<div class="logo">
-					<a href="#">Auto<span>Dealer</span></a>
+					<a href="#">Range<span>Auto</span></a>
 				</div>
 				<div class="header_contacts">
-					<div class="phone">+1 (800) 455-55-95</div>
-					<div>WinterJuice, LLC, 1875 South Grant Street, Suite 680, San Mateo, CA 94402</div>
+					<div class="phone"> +38(099) - 023 - 9743</div>
+					<div>Lviv, Lukasha Street, 5</div>
 				</div>
 				<div class="socials">
 					<a href="#"><img src="images/fb_icon.png" alt=""></a>
@@ -66,7 +66,7 @@
 							<li><a href="10_page.html">About Us</a></li>
 							<li><a href="08_blog.html">Blog</a></li>
 							<li><a href="#">News</a></li>
-							<li><a href="#">For Salers</a></li>
+							<li><a href="07_add.php">For Salers</a></li>
 							<li><a href="02_contacts.html">Contacts</a></li>
 						</ul>
 					</div>
@@ -144,15 +144,16 @@
 										if($result)
 										{
    											$rows = mysqli_num_rows($result); // количество полученных строк
-     										for ($i = 0 ; $i < 4 ; ++$i){
+   											$number = 0;
+     										for ($i = 0 ; $i < $rows ; ++$i){
 										    $row = mysqli_fetch_array($result);
-										    if($i == 3) {
+										    if($number == 3) {
 										    	echo "<li class='last'>
 										    <a href='#'> <img src = 'images/placeholders/220x164.gif' alt=''/>
-										    <div class='description'>Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
+										    <div class='description'>$row<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
 										<div class='title'> $row[0] <span class='price'>$ $row[3]</span></div>
 									</a> ";
-
+									$number = 0;
 										    }
 										    else {
 										    echo "<li>
@@ -160,6 +161,7 @@
 										    <div class='description'>Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
 										<div class='title'> $row[0] <span class='price'>$ $row[3]</span></div>
 									</a> ";
+									$number++;
 									}
 										    
 											}
@@ -194,69 +196,41 @@
 						<div class="recent_cars">
 							<h2><strong>Recent</strong> listings</h2>
 							<ul>
-								<li>
-									<a href="#">
-										<img src="images/placeholders/220x164.gif" alt=""/>
-										<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-										<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="images/placeholders/220x164.gif" alt=""/>
-										<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-										<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-									</a>
-								</li>
-								<li class="last">
-									<a href="#">
-										<img src="images/placeholders/220x164.gif" alt=""/>
-										<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-										<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="images/placeholders/220x164.gif" alt=""/>
-										<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-										<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="images/placeholders/220x164.gif" alt=""/>
-										<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-										<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-									</a>
-								</li>
-								<li class="last">
-									<a href="#">
-										<img src="images/placeholders/220x164.gif" alt=""/>
-										<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-										<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="images/placeholders/220x164.gif" alt=""/>
-										<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-										<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="images/placeholders/220x164.gif" alt=""/>
-										<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-										<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-									</a>
-								</li>
-								<li class="last">
-									<a href="#">
-										<img src="images/placeholders/220x164.gif" alt=""/>
-										<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-										<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-									</a>
-								</li>
+								<?php 
+										require_once 'connection.php';
+										$link = mysqli_connect($host, $user, $password, $database) or die("Ошибка " . mysqli_error($link)); 
+     
+										$query ="SELECT * FROM Cars";
+ 
+										$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
+										if($result)
+										{
+   											$rows = mysqli_num_rows($result); // количество полученных строк
+   											$number = 0;
+     										for ($i = 0 ; $i < $rows ; ++$i){
+										    $row = mysqli_fetch_array($result);
+										    if($number == 2) {
+										    	echo "<li class='last'>
+										    <a href='#'> <img src = 'images/placeholders/220x164.gif' alt=''/>
+										    <div class='description'>$row<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
+										<div class='title'> $row[0] <span class='price'>$ $row[3]</span></div>
+									</a> ";
+									$number = 0;
+										    }
+										    else {
+										    echo "<li>
+										    <a href='#'> <img src = 'images/placeholders/220x164.gif' alt=''/>
+										    <div class='description'>Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
+										<div class='title'> $row[0] <span class='price'>$ $row[3]</span></div>
+									</a> ";
+									$number++;
+									}
+										    
+											}
+											mysqli_free_result($result);
+											mysqli_close($link); 
+										}
+    						?>
 							</ul>
 							<a href="#" class="all">all listings</a>
 						</div>
@@ -298,7 +272,7 @@
 				<div class="top_footer">
 					<div class="f_widget first">
 						<h3><strong>About</strong> us</h3>
-						<a href="#" class="footer_logo">AutoDealer</a>
+						<a href="#" class="footer_logo">RangeAuto</a>
 						<p>Lorem ipsum dolor sit amet, cons ectetur adipisicing elit, sed do eiusmod tempor.
 Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eius  mod tempor incididunt ut.</p>
 					</div>
@@ -343,7 +317,7 @@ Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eius  mod temp
 						<div class="f_contact f_contact_3"><strong>Email:</strong> <a href="mailto:#">testmail@sitename.com</a></div>
 					</div>
 					<div class="f_widget divide last frame_wrapper">
-						<iframe width="204" height="219" src="https://maps.google.com.ua/maps?f=q&amp;source=s_q&amp;hl=ruamp;hl=en&amp;geocode=&amp;q=%D0%9C%D0%B0%D0%BD%D1%85%D1%8D%D1%82%D1%82%D0%B5%D0%BD,+%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA,+%D0%A1%D0%BE%D0%B5%D0%B4%D0%B8%D0%BD%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5+%D0%A8%D1%82%D0%B0%D1%82%D1%8B+%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B8&amp;aq=0&amp;oq=%D0%BC%D0%B0%D0%BD%D1%85&amp;sll=48.382803,31.17461&amp;sspn=7.573826,21.643066&amp;ie=UTF8&amp;hq=&amp;hnear=%D0%9C%D0%B0%D0%BD%D1%85%D1%8D%D1%82%D1%82%D0%B5%D0%BD,+%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA,+%D0%9D%D1%8C%D1%8E+%D0%99%D0%BE%D1%80%D0%BA,+%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA,+%D0%A1%D0%BE%D0%B5%D0%B4%D0%B8%D0%BD%D1%91%D0%BD%D0%BD%D1%8B%D0%B5+%D0%A8%D1%82%D0%B0%D1%82%D1%8B+%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B8&amp;t=m&amp;ll=40.79042,-73.959961&amp;spn=0.113849,0.139389&amp;z=11&amp;iwloc=A&amp;output=embed"></iframe>
+						<iframe width="204" height="219" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2293.0334224982694!2d24.013849597888086!3d49.82662241204023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae787c37035ff%3A0x2dd12ba1871f61a8!2z0JPRg9GA0YLQvtC20LjRgtC-0Log4oSWMTEgItCd0KMg0JvQnyI!5e0!3m2!1sru!2sua!4v1525631236786"></iframe>
 					</div>
 				</div>
 			</div>
@@ -386,7 +360,7 @@ Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eius  mod temp
 				</div>
 			</div>
 			<div class="copyright_wrapper">
-				<div class="copyright">&copy; 2013 Auto Sale. All Rights Reserved.</div>
+				<div class="copyright">&copy; 2018 Auto Sale. All Rights Reserved. Bogdan ^_^</div>
 			</div>
 		</div>
 	<!--EOF FOOTER-->
