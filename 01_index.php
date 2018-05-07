@@ -389,7 +389,7 @@ mysqli_close($link);
 							<p class="title"><strong>Looking</strong> for a car?</p>
 							<p class="desc">1.000 new offers every day. 35.000 offers on site</p>
 						</div>
-						<a href="#">Search</a>
+						<a href="12_gallery.php">Search</a>
 					</div>
 					<div class="banner_2 main_banner">
 						<div class="text_wrapper">

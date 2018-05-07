@@ -134,6 +134,66 @@
 						<div class="recent_cars four_columns">
 							<h2><strong>Cars</strong> gallery</h2>
 							<ul>
+							<?php 
+										require_once 'connection.php';
+										$link = mysqli_connect($host, $user, $password, $database) or die("Ошибка " . mysqli_error($link)); 
+     
+										$query ="SELECT * FROM Cars";
+ 
+										$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
+										if($result)
+										{
+   											$rows = mysqli_num_rows($result); // количество полученных строк
+     										for ($i = 0 ; $i < 4 ; ++$i){
+										    $row = mysqli_fetch_array($result);
+										    if($i == 3) {
+										    	echo "<li class='last'>
+										    <a href='#'> <img src = 'images/placeholders/220x164.gif' alt=''/>
+										    <div class='description'>Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
+										<div class='title'> $row[0] <span class='price'>$ 115 265</span></div>
+									</a> ";
+										    }
+										    else {
+										    echo "<li>
+										    <a href='#'> <img src = 'images/placeholders/220x164.gif' alt=''/>
+										    <div class='description'>Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
+										<div class='title'> $row[0] <span class='price'>$ 115 265</span></div>
+									</a> ";
+									}
+										    
+											}
+											mysqli_free_result($result);
+											mysqli_close($link); 
+										}
+    						?>
+							<li>
+									<a href="#">
+										<img src="images/placeholders/220x164.gif" alt=""/>
+										<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
+										<div class="title">BMW <span class="price">$ 115 265</span></div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="images/placeholders/220x164.gif" alt=""/>
+										<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
+										<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="images/placeholders/220x164.gif" alt=""/>
+										<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
+										<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
+									</a>
+								</li>
+								<li class="last">
+									<a href="#">
+										<img src="images/placeholders/220x164.gif" alt=""/>
+										<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
+										<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
+									</a>
+								</li>
 								<li>
 									<a href="#">
 										<img src="images/placeholders/220x164.gif" alt=""/>
