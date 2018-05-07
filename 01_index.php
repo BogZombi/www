@@ -69,11 +69,9 @@
 							<li><a href="02_contacts.html">Contacts</a></li>
 						</ul>
 					</div>
-					<div id="search_form">
-						<form method="get" action="#">
-							<input type="text" onblur="if(this.value=='') this.value='Search on site';" onfocus="if(this.value=='Search on site') this.value='';" value="Search on site" class="txb_search"/>
-							<input type="submit" value="Search" class="btn_search"/>
-						</form>
+					<div class="all_wrapper">
+						<a href="04_catalog.php" class="sng_in">Sing in</a>
+						<a href="#" class="sng_up">Sing up</a>
 					</div>
 				</div>
 			</div>
@@ -87,17 +85,65 @@
 						<div class="home_slider">
 							<div class="slider slider_1">
 								<div class="slide">
-									<img src="images/placeholders/620x425.gif" alt=""/>
+								<img src="images/placeholders/620x425.gif" alt=""/>
 									<div class="description">
-										<h2 class="title">2012 Mercedes-Benz CLS 320</h2>
+										<h2 class="title">
+										<?php
+										require_once 'connection.php';
+										$link = mysqli_connect($host, $user, $password, $database) or die("Ошибка " . mysqli_error($link)); 
+     
+										$query ="SELECT * FROM Cars";
+ 
+										$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
+										if($result)
+										{
+   											$rows = mysqli_num_rows($result); // количество полученных строк
+     
+										    for ($i = 0 ; $i < $rows ; ++$i)
+										    {
+										        $row = mysqli_fetch_row($result);
+										        
+										    }
+										     echo "$row[2] $row[0] $row[1]";
+    											mysqli_free_result($result);
+											}
+											mysqli_close($link);
+										 ?>
+										 	
+										 </h2>
 										<p class="desc"><span><strong>Miles: </strong>25,000</span><span><strong>Engine: </strong>2.6</span></p>
 										<div class="price">$ 32 200</div>
+
+										
 									</div>
+								
 								</div>
 								<div class="slide">
 									<img src="images/placeholders/620x425.gif" alt=""/>
 									<div class="description">
-										<h2 class="title">2010 Mercedes-Benz Sport</h2>
+										<h2 class="title"><?php
+										require_once 'connection.php';
+										$link = mysqli_connect($host, $user, $password, $database) or die("Ошибка " . mysqli_error($link)); 
+     
+$query ="SELECT * FROM Cars";
+ 
+$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
+if($result)
+{
+    $rows = mysqli_num_rows($result); // количество полученных строк
+     
+    for ($i = 0 ; $i < 1 ; ++$i)
+    {
+        $row = mysqli_fetch_row($result);
+        
+    }
+     echo "$row[2] $row[0] $row[1]";
+    // очищаем результат
+    mysqli_free_result($result);
+}
+ 
+mysqli_close($link);
+										 ?></h2>
 										<p class="desc"><span><strong>Miles: </strong>25,000</span><span><strong>Engine: </strong>2.6</span></p>
 										<div class="price">$ 32 200</div>
 									</div>
@@ -137,53 +183,53 @@
 							<div class="select_box_1">
 								<select class="select_1">
 									<option value="0">Any</option>
-									<option value="1">Audi</option>
-									<option value="2">Mercedes-Benz</option>
-									<option value="3">BMW</option>
-									<option value="4">Lexus</option>
-									<option value="5">Lincoln</option>
-									<option value="6">Ford</option>
-									<option value="7">Fiat</option>
-									<option value="8">Dodge</option>
+									<option value="Audi">Audi</option>
+									<option value="Mercedes-Benz">Mercedes-Benz</option>
+									<option value="BMW">BMW</option>
+									<option value="Lexus">Lexus</option>
+									<option value="Lincoln">Lincoln</option>
+									<option value="Ford">Ford</option>
+									<option value="Fiat">Fiat</option>
+									<option value="Dodge">Dodge</option>
 								</select>
 							</div>
 							<label><strong>Model:</strong></label>
 							<div class="select_box_1">
 								<select class="select_1">
 									<option value="0">Any</option>
-									<option value="1">R8</option>
-									<option value="2">S500</option>
-									<option value="3">540i</option>
-									<option value="4">RX300</option>
-									<option value="5">Navigator</option>
-									<option value="6">Taurus</option>
-									<option value="7">Doblo</option>
-									<option value="8">Viper</option>
+									<option value="R8">R8</option>
+									<option value="S500">S500</option>
+									<option value="540i">540i</option>
+									<option value="RX300">RX300</option>
+									<option value="Navigator">Navigator</option>
+									<option value="Taurus">Taurus</option>
+									<option value="Doblo">Doblo</option>
+									<option value="Viper">Viper</option>
 								</select>
 							</div>
 							<label><strong>Year:</strong></label>
 							<div class="select_box_2">
 								<select class="select_2">
 									<option value="0">From</option>
-									<option value="1">2013</option>
-									<option value="2">2012</option>
-									<option value="3">2011</option>
-									<option value="4">2010</option>
-									<option value="5">2009</option>
-									<option value="6">2008</option>
-									<option value="7">2007</option>
-									<option value="8">2006</option>
+									<option value="2013">2013</option>
+									<option value="2012">2012</option>
+									<option value="2011">2011</option>
+									<option value="2010">2010</option>
+									<option value="2009">2009</option>
+									<option value="2008">2008</option>
+									<option value="2007">2007</option>
+									<option value="2006">2006</option>
 								</select>
 								<select class="select_2">
 									<option value="0">To</option>
-									<option value="1">2013</option>
-									<option value="2">2012</option>
-									<option value="3">2011</option>
-									<option value="4">2010</option>
-									<option value="5">2009</option>
-									<option value="6">2008</option>
-									<option value="7">2007</option>
-									<option value="8">2006</option>
+									<option value="2013">2013</option>
+									<option value="2012">2012</option>
+									<option value="2011">2011</option>
+									<option value="2010">2010</option>
+									<option value="2009">2009</option>
+									<option value="2008">2008</option>
+									<option value="2007">2007</option>
+									<option value="2006">2006</option>
 								</select>
 								<div class="clear"></div>
 							</div>
@@ -191,25 +237,25 @@
 							<div class="select_box_2">
 								<select class="select_2">
 									<option value="0">From</option>
-									<option value="1">1000</option>
-									<option value="2">2000</option>
-									<option value="3">3000</option>
-									<option value="4">4000</option>
-									<option value="5">5000</option>
-									<option value="6">6000</option>
-									<option value="7">7000</option>
-									<option value="8">8000</option>
+									<option value="1000">1000</option>
+									<option value="2000">2000</option>
+									<option value="3000">3000</option>
+									<option value="4000">4000</option>
+									<option value="5000">5000</option>
+									<option value="6000">6000</option>
+									<option value="7000">7000</option>
+									<option value="8000">8000</option>
 								</select>
 								<select class="select_2">
 									<option value="0">To</option>
-									<option value="1">1000</option>
-									<option value="2">2000</option>
-									<option value="3">3000</option>
-									<option value="4">4000</option>
-									<option value="5">5000</option>
-									<option value="6">6000</option>
-									<option value="7">7000</option>
-									<option value="8">8000</option>
+									<option value="1000">1000</option>
+									<option value="2000">2000</option>
+									<option value="3000">3000</option>
+									<option value="4000">4000</option>
+									<option value="5000">5000</option>
+									<option value="6000">6000</option>
+									<option value="7000">7000</option>
+									<option value="8000">8000</option>
 								</select>
 								<div class="clear"></div>
 							</div>
@@ -217,25 +263,25 @@
 							<div class="select_box_2">
 								<select class="select_2">
 									<option value="0">From</option>
-									<option value="1">1000</option>
-									<option value="2">2000</option>
-									<option value="3">3000</option>
-									<option value="4">4000</option>
-									<option value="5">5000</option>
-									<option value="6">6000</option>
-									<option value="7">7000</option>
-									<option value="8">8000</option>
+									<option value="1000">1000</option>
+									<option value="2000">2000</option>
+									<option value="3000">3000</option>
+									<option value="4000">4000</option>
+									<option value="5000">5000</option>
+									<option value="6000">6000</option>
+									<option value="7000">7000</option>
+									<option value="8000">8000</option>
 								</select>
 								<select class="select_2" id = "sel5">
 									<option value="0">To</option>
-									<option value="1">1000</option>
-									<option value="2">2000</option>
-									<option value="3">3000</option>
-									<option value="4">4000</option>
-									<option value="5">5000</option>
-									<option value="6">6000</option>
-									<option value="7">7000</option>
-									<option value="8">8000</option>
+									<option value="1000">1000</option>
+									<option value="2000">2000</option>
+									<option value="3000">3000</option>
+									<option value="4000">4000</option>
+									<option value="5000">5000</option>
+									<option value="6000">6000</option>
+									<option value="7000">7000</option>
+									<option value="8000">8000</option>
 								<div class="clear"></div>
 							</div>
 							<div class="chb_wrapper">
@@ -379,123 +425,11 @@
 						</div>
 						<div class="tabs_wrapper home_tabs section">
 						  	<ul class="tabs">
-						    	<li class="current">Dealers</li>
-						    	<li>Service Stations</li>
-						    	<li>Insurance</li>
+						    	<li class="current">Auctions</li>
 						 	</ul>
-						 	<div class="box visible">
-						 		<a href="#" class="all">Show all...</a>
-						   		<div class="results">Found 433 dealers</div>
-						   		<div class="clear"></div>
-						   		<div class="tabs_carousel">
-						   			<div class="slide">
-										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">St. Louis Auto Dealers</a>
-									</div>
-									<div class="slide">
-										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">Executive Cars Group</a>
-									</div>
-									<div class="slide">
-										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">Rim Wear</a>
-									</div>
-									<div class="slide">
-										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">Dj Cruz’s Auto Sales</a>
-									</div>
-									<div class="slide">
-										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">St. Louis Auto Dealers</a>
-									</div>
-									<div class="slide">
-										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">Executive Cars Group</a>
-									</div>
-									<div class="slide">
-										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">Rim Wear</a>
-									</div>
-									<div class="slide">
-										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">Dj Cruz’s Auto Sales</a>
-									</div>
-									<div class="slide">
-										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">St. Louis Auto Dealers</a>
-									</div>
-									<div class="slide">
-										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">Executive Cars Group</a>
-									</div>
-									<div class="slide">
-										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">Rim Wear</a>
-									</div>
-									<div class="slide">
-										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">Dj Cruz’s Auto Sales</a>
-									</div>
-								</div>
-						  	</div>
-						  	<div class="box">
+						  	<div class="box visible">
 						    	<a href="#" class="all">Show all...</a>
 						   		<div class="results">Found 50 stations</div>
-						   		<div class="clear"></div>
-						   		<div class="tabs_carousel">
-						   			<div class="slide">
-										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">St. Louis Auto Dealers</a>
-									</div>
-									<div class="slide">
-										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">Executive Cars Group</a>
-									</div>
-									<div class="slide">
-										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">Rim Wear</a>
-									</div>
-									<div class="slide">
-										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">Dj Cruz’s Auto Sales</a>
-									</div>
-									<div class="slide">
-										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">St. Louis Auto Dealers</a>
-									</div>
-									<div class="slide">
-										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">Executive Cars Group</a>
-									</div>
-									<div class="slide">
-										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">Rim Wear</a>
-									</div>
-									<div class="slide">
-										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">Dj Cruz’s Auto Sales</a>
-									</div>
-									<div class="slide">
-										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">St. Louis Auto Dealers</a>
-									</div>
-									<div class="slide">
-										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">Executive Cars Group</a>
-									</div>
-									<div class="slide">
-										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">Rim Wear</a>
-									</div>
-									<div class="slide">
-										<a href="#" class="img"><img src="images/placeholders/150x110.gif" alt=""/></a>
-										<a href="#" class="title">Dj Cruz’s Auto Sales</a>
-									</div>
-								</div>
-						  	</div>
-						  	<div class="box">
-						    	<a href="#" class="all">Show all...</a>
-						   		<div class="results">Found 10 incurances</div>
 						   		<div class="clear"></div>
 						   		<div class="tabs_carousel">
 						   			<div class="slide">
@@ -601,7 +535,7 @@
 				<div class="top_footer">
 					<div class="f_widget first">
 						<h3><strong>About</strong> us</h3>
-						<a href="#" class="footer_logo">AutoDealer</a>
+						<a href="#" class="footer_logo">RangeAuto</a>
 						<p>Lorem ipsum dolor sit amet, cons ectetur adipisicing elit, sed do eiusmod tempor.
 Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eius  mod tempor incididunt ut.</p>
 					</div>
@@ -646,7 +580,7 @@ Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eius  mod temp
 						<div class="f_contact f_contact_3"><strong>Email:</strong> <a href="mailto:#">testmail@sitename.com</a></div>
 					</div>
 					<div class="f_widget divide last frame_wrapper">
-						<iframe width="204" height="219" src=https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2293.0334224982694!2d24.013849597888086!3d49.82662241204023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae787c37035ff%3A0x2dd12ba1871f61a8!2z0JPRg9GA0YLQvtC20LjRgtC-0Log4oSWMTEgItCd0KMg0JvQnyI!5e0!3m2!1sru!2sua!4v1525631236786"></iframe>
+						<iframe width="204" height="219" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2293.0334224982694!2d24.013849597888086!3d49.82662241204023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae787c37035ff%3A0x2dd12ba1871f61a8!2z0JPRg9GA0YLQvtC20LjRgtC-0Log4oSWMTEgItCd0KMg0JvQnyI!5e0!3m2!1sru!2sua!4v1525631236786"></iframe>
 					</div>
 				</div>
 			</div>
@@ -689,7 +623,7 @@ Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eius  mod temp
 				</div>
 			</div>
 			<div class="copyright_wrapper">
-				<div class="copyright">&copy; 2013 Auto Sale. All Rights Reserved.</div>
+				<div class="copyright">&copy; 2018 Auto Sale. All Rights Reserved.</div>
 			</div>
 		</div>
 	<!--EOF FOOTER-->

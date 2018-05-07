@@ -1276,4 +1276,7 @@ only screen and (min-device-width: 10px) and (max-device-width: 400px){
 		top:auto;
 		white-space: nowrap;
 	}
+	.sng_in {
+		text-decoration: none;
+	}
 }
