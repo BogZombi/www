@@ -104,14 +104,13 @@
 							</div>
 							<div class="post">
 								<img src="images/placeholders/312x248.gif" alt="" class="alignleft"/>
-								<p>Lorem ipsum dolo stet consectet adipiscing elit. Vestibul dictum, nisi id vulputate ullamcoper lorem ipsum dolo st consectetur adipiscing elit. Vestibulu dictu, nisi id vulput ullamcoper lorem ipsum dolo stet. Vestibulu dictum, nisi id vulputate ullamcoper.</p>
-								<p>Lorem ipsum dolo stet consectet adipiscing elit. Vestibul dictum, nisi id vulputate ullamcoper lorem ipsum dolo st consectetur adipiscing elit. Vestibulu dictum, nisi vulputa ullamcoper lorem ipsum dolo stet. Vestibulu dictum, nisi id vulputate ullamcoper lorem ipsum et dolo stet. Lorem ipsum dolo stet consectetur adipiscing elit. </p>
+								<p>Borsch is the famous soup in many Russian families, as well as many Eastern and Central European countries. The recipes of borsch vary, but vegetables (mainly beet) and sour cream are always the main ingredients. The beetroot used in cooking borsch gives the soup its trademark deep reddish-purple color.</p>
+								<p>Borsch is the famous soup in many Russian families, as well as many Eastern and Central European countries. The recipes of borsch vary, but vegetables (mainly beet) and sour cream are always the main ingredients. The beetroot used in cooking borsch gives the soup its trademark deep reddish-purple color. </p>
 								<div class="clear"></div>
-								<p>Lorem ipsum dolo stet consectetur adipiscing elit. Vestibulu dictum, nisi id vulputate ullamcoper lorem ipsum dolo st consectetur adipiscing elit. Vestibulu dictum, nisi id vulputate ullamcoper lorem ipsum dolo stet. Vestibulu dictum, nisi vulputate ullamcoper lorem ipsum dolo stet consectetur adipiscing elit.  Vestibulu dictum, nisi id vulputate ullamcoper lorem ipsum dolo stet consectetur adipiscing elit. </p>
-								<cite class="alignleft">Nulla ornare imperdiet elit morbi in erat sit amet nibh laoreet congue in vitae ante suspendisse stet imperdiet euismod suscipit imperdiet elit.</cite>
-								<p>Lorem ipsum dolo stet consectet adipiscing elit. Vestibul dictum, nisi id vulputate ullamcoper lorem ipsum dolo st consectetur adipiscing elit. Vestibulu dictu, nisi id vulput ullamcoper lorem ipsum dolo stet. Vestibulu dictum, nisi id vulputate ullamcoper.</p>
+								<p>Borsch is the famous soup in many Russian families, as well as many Eastern and Central European countries. The recipes of borsch vary, but vegetables (mainly beet) and sour cream are always the main ingredients. The beetroot used in cooking borsch gives the soup its trademark deep reddish-purple color. </p>
+								<cite class="alignleft">Borsch is the famous soup in many Russian families, as well as many Eastern and Central European countries. The recipes of borsch vary, but vegetables (mainly beet) and sour cream are always the main ingredients. The beetroot used in cooking borsch gives the soup its trademark deep reddish-purple color.</p>
 								<div class="clear"></div>
-								<p>Lorem ipsum dolo stet consectetur adipiscing elit. Vestibulu dictum, nisi id vulputate ullamcoper lorem ipsum dolo st consectetur adipiscing elit. Vestibulu dictum, nisi id vulputate ullamcoper lorem ipsum dolo stet. Vestibulu dictum, nisi vulputate ullamcoper lorem ipsum dolo stet consectetur adipiscing elit.  Vestibulu dictum, nisi id vulputate ullamcoper lorem ipsum dolo stet consectetur adipiscing elit. Vestibulu dictum, nisi id vulputate ullamcoper lorem ipsum dolo ste. Vestibulu dictum, nisi id vulputate ullamcoper lorem ipsum dolo stet consectetur.</p>
+								<p>Borsch is the famous soup in many Russian families, as well as many Eastern and Central European countries. The recipes of borsch vary, but vegetables (mainly beet) and sour cream are always the main ingredients. The beetroot used in cooking borsch gives the soup its trademark deep reddish-purple color.Borsch is the famous soup in many Russian families, as well as many Eastern and Central European countries. The recipes of borsch vary, but vegetables (mainly beet) and sour cream are always the main ingredients. The beetroot used in cooking borsch gives the soup its trademark deep reddish-purple color.</p>
 							</div>
 						</div>
 						<div class="comments">
@@ -125,7 +124,7 @@
 												<div class="author">Bogdan Vyshynsky</div>
 												<div class="date">May 1, 2018 </div>
 											</div>
-											<div class="comment">Lorem ipsum dolo stet consectetur adipiscing elit. Vestibulu dictum, nisi id vulputate ullamcoper lorem ipsum dolo stet consectetur adipiscing elit. Vestibulu dictum, nisi id vulputate ullamcoper lorem ipsum dolo stet. Vestibulu dictum, nisi id vulputate ullamcoper lorem ipsum.</div>
+											<div class="comment">Borsch is the famous soup in many Russian families, as well as many Eastern and Central European countries. The recipes of borsch vary, but vegetables (mainly beet) and sour cream are always the main ingredients. The beetroot used in cooking borsch gives the soup its trademark deep reddish-purple color.</div>
 										</div>
 										<div class="clear"></div>
 									</div>
@@ -138,7 +137,7 @@
 														<div class="author">Bogdan Vyshynsky</div>
 														<div class="date">May 1, 2018 </div>
 													</div>
-													<div class="comment">Lorem ipsum dolo stet consectetur adipiscing elit. Vestibulu dictum, nisi id vulputate ullamcoper lorem ipsum dolo stet consectetur adipiscing elit. Vestibulu dictum, nisi id vulputate ullamcoper lorem ipsum dolo stet. </div>
+													<div class="comment">Borsch is the famous soup in many Russian families, as well as many Eastern and Central European countries. The recipes of borsch vary, but vegetables (mainly beet) and sour cream are always the main ingredients. The beetroot used in cooking borsch gives the soup its trademark deep reddish-purple color. </div>
 												</div>
 												<div class="clear"></div>
 											</div>
@@ -152,7 +151,7 @@
 																<div class="date">May 1, 2018 </div>
 																<a href="#" class="reply">Reply</a>
 															</div>
-															<div class="comment">Lorem ipsum dolo stet consectetur adipiscing elit. Vestibulu dictum, nisi id vulputate ullamcoper lorem ipsum dolo stet consectetur adipiscing elit. Vestibulu dictum, nisi id vulputate ullamcoper. </div>
+															<div class="comment">Borsch is the famous soup in many Russian families, as well as many Eastern and Central European countries.  </div>
 														</div>
 														<div class="clear"></div>
 													</div>
@@ -169,7 +168,7 @@
 												<div class="author">Bogdan Vyshynsky</div>
 												<div class="date">May 1, 2018 </div>
 											</div>
-											<div class="comment">Lorem ipsum dolo stet consectetur adipiscing elit. Vestibulu dictum, nisi id vulputate ullamcoper lorem ipsum dolo stet consectetur adipiscing elit. Vestibulu dictum, nisi id vulputate ullamcoper lorem ipsum dolo stet. Vestibulu dictum, nisi id vulputate ullamcoper lorem ipsum.</div>
+											<div class="comment">Borsch is the famous soup in many Russian families, as well as many Eastern and Central European countries. </div>
 										</div>
 										<div class="clear"></div>
 									</div>
@@ -182,14 +181,14 @@
 														<div class="author">Bogdan Vyshynsky</div>
 														<div class="date">May 1, 2018 </div>
 													</div>
-													<div class="comment">Lorem ipsum dolo stet consectetur adipiscing elit. Vestibulu dictum, nisi id vulputate ullamcoper lorem ipsum dolo stet consectetur adipiscing elit. Vestibulu dictum, nisi id vulputate ullamcoper lorem ipsum dolo stet. </div>
+													<div class="comment">Borsch is the famous soup in many Russian families, as well as many Eastern and Central European countries. The recipes of borsch vary, but vegetables (mainly beet) and sour cream are always the main ingredients. The beetroot used in cooking borsch gives the soup its trademark deep reddish-purple color. </div>
 												</div>
 												<div class="clear"></div>
 											</div>
 										</li>
 									</ul>
 								</li>
-								<li class="last">
+								<li>
 									<div class="wrapper">
 										<img src="images/placeholders/61x61.gif" alt=""/>
 										<div class="comment_data">
@@ -197,11 +196,34 @@
 												<div class="author">Bogdan Vyshynsky</div>
 												<div class="date">May 1, 2018 </div>
 											</div>
-											<div class="comment">Lorem ipsum dolo stet consectetur adipiscing elit. Vestibulu dictum, nisi id vulputate ullamcoper lorem ipsum dolo stet consectetur adipiscing elit. Vestibulu dictum, nisi id vulputate ullamcoper lorem ipsum dolo stet. Vestibulu dictum, nisi id vulputate ullamcoper lorem ipsum.</div>
+											<div class="comment">Borsch is the famous soup in many Russian families, as well as many Eastern and Central European countries. The recipes of borsch vary, but vegetables (mainly beet) and sour cream are always the main ingredients. </div>
 										</div>
 										<div class="clear"></div>
 									</div>
 								</li>
+								<?php 
+								$name = $_GET['Name'];
+								$email = $_GET['e-mail'];
+								$website = $_GET['website'];
+								$textbox1 = $_GET['textbox1'];
+									echo "<ul class = 'last'>
+										<li>
+											<div class='wrapper'>
+												<img src='images/placeholders/61x61.gif' alt=''/>
+												<div class='comment_data'>
+													<div class='comment_author'>
+														<div class='author'>$name</div>
+														<div class='date'>May 1, 2018 </div>
+													</div>
+													<div class='comment'>$textbox1 </div>
+												</div>
+												<div class='clear'></div>
+											</div>
+										</li>
+									</ul>";
+					
+				
+							?>
 							</ul>
 						</div>
 						<div class="comment_form">
@@ -209,37 +231,37 @@
 							<form method="get" action="#">
 								<div class="fld_box">
 									<label>Name: </label>
-									<input type="text" value=""/>
+									<input type="text" value="" name="Name" />
 								</div>
 								<div class="fld_box center">
 									<label>E-mail: </label>
-									<input type="text" value=""/>
+									<input type="text" value="" name="e-mail" />
 								</div>
 								<div class="fld_box">
 									<label>Website: </label>
-									<input type="text" value=""/>
+									<input type="text" value="" name="website" />
 								</div>
 								<div class="clear"></div>
 								<label>Comment: </label>
-								<textarea cols="20" rows="20"></textarea>
+								<textarea cols="20" rows="20" name="textbox1"></textarea>
 								<input type="submit" value="submit" class="submit"/>
 							</form>
-						</div>
+													</div>
 					</div>
 					<div class="sidebar">
 						<div class="widget">
 							<h2><strong>Links</strong> list</h2>
 							<ul>
-								<li><a href="#">Lorem ipsum dolor </a></li>
-								<li><a href="#">Dolor sit amet, consectetur</a></li>
-								<li><a href="#">Amet, adipiscing elit</a></li>
-								<li><a href="#">Elit dictum, nisi id vulput</a></li>
+								<li><a href="#">Borsch is the famous soup</a></li>
+								<li><a href="#">Borsch is the famous soup</a></li>
+								<li><a href="#">Borsch is the famous soup</a></li>
+								<li><a href="#">Borsch is the famous soup</a></li>
 							</ul>
 						</div>
 						<div class="widget">
 							<h2><strong>Text</strong> widget</h2>
 							<div class="post">
-								<p>Lorem ipsum dolo stet consectetur adipiscing elit. Vestibulu dictum, ni id vulputate ullamcoper</p>
+								<p>Borsch is the famous soup in many Russian families, as well as many Eastern and Central European countries. </p>
 							</div>
 							<a href="#" class="more markered">Read more</a>
 						</div>
@@ -250,7 +272,7 @@
 								<a href="#" class="thumb"><img src="images/placeholders/200x125.gif" alt=""/></a>
 							</div>
 							<div class="post">
-								<p>Lorem ipsum dolo stet consectetur adipiscing elit vestibulu.</p>
+								<p>Borsch is the famous soup in many Russian families, as well as many Eastern and Central European countries.</p>
 							</div>
 							<a href="#" class="more markered">Read more</a>
 						</div>
@@ -305,16 +327,16 @@
 							<h2><strong>Twitter</strong> feed</h2>
 							<ul class="twitter_feed">
 								<li>
-									Lorem ipsum dolo at consecte adipiscing elit. Vestibul dictu, nisi id vulputate ullamcoper
-									<a href="#">http://automarket.com/twitter</a>
+									 Borsch is the famous soup
+									<a href="#">http://rangeauto.com/twitter</a>
 								</li>
 								<li>
-									Lorem ipsum dolo at consecte adipiscing elit. Vestibul dictu, nisi id vulputate ullamcoper
-									<a href="#">http://automarket.com/twitter</a>
+									Borsch is the famous soup
+									<a href="#">http://rangeauto.com/twitter</a>
 								</li>
 								<li class="last">
-									Lorem ipsum dolo at consecte adipiscing elit. Vestibul dictu, nisi id vulputate ullamcoper
-									<a href="#">http://automarket.com/twitter</a>
+									Borsch is the famous soup
+									<a href="#">http://rangeauto.com/twitter</a>
 								</li>
 							</ul>
 						</div>
@@ -336,20 +358,20 @@
 							<h2><strong>Accordion</strong> widget</h2>
 							<div class="accordion">
 								<div class="acc_box">
-									<h4>Lorem ipsum dolor sit amet</h4>
-									<div class="">Dolo at consecte adipiscing elit. Vestibul dictum, nisi id vulputate ullamcoper.</div>
+									<h4>Borsch is the famous soup</h4>
+									<div class="">Here are many set varia ions passages.</div>
 								</div>
 								<div class="acc_box">
-									<h4>Lorem ipsum dolor sit amet</h4>
-									<div class="">Dolo at consecte adipiscing elit. Vestibul dictum, nisi id vulputate ullamcoper.</div>
+									<h4>Borsch is the famous soup</h4>
+									<div class="">Here are many set varia ions passages.</div>
 								</div>
 								<div class="acc_box">
-									<h4>Lorem ipsum dolor sit amet</h4>
-									<div class="">Dolo at consecte adipiscing elit. Vestibul dictum, nisi id vulputate ullamcoper.</div>
+									<h4>Borsch is the famous soup</h4>
+									<div class="">Here are many set varia ions passages.</div>
 								</div>
 								<div class="acc_box last">
-									<h4>Lorem ipsum dolor sit amet</h4>
-									<div class="">Dolo at consecte adipiscing elit. Vestibul dictum, nisi id vulputate ullamcoper.</div>
+									<h4>Borsch is the famous soup</h4>
+									<div class="">Here are many set varia ions passages.</div>
 								</div>
 							</div>
 						</div>
@@ -366,8 +388,7 @@
 					<div class="f_widget first">
 						<h3><strong>About</strong> us</h3>
 						<a href="#" class="footer_logo">RangeAuto</a>
-						<p>Lorem ipsum dolor sit amet, cons ectetur adipisicing elit, sed do eiusmod tempor.
-Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eius  mod tempor incididunt ut.</p>
+						<p>Borsch is the famous soup in many Russian families, as well as many Eastern and Central European countries. The recipes of borsch vary, but vegetables (mainly beet) and sour cream are always the main ingredients.</p>
 					</div>
 					<div class="f_widget divide second">
 						<h3><strong>Open</strong> hours</h3>

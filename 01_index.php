@@ -250,7 +250,7 @@
 										$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
 										if($result)
 										{
-   											$rows = mysqli_num_rows($result); // количество полученных строк
+   											$rows = mysqli_num_rows($result);
    											$number = 0;
      										for ($i = 0 ; $i < $rows ; ++$i){
 										    $row = mysqli_fetch_array($result);

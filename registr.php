@@ -94,12 +94,40 @@
 		</div>
 	<!--EOF HEADER-->
 	<!--BEGIN CONTENT-->
-			<p id="name"> <input id="name1" type="text" name="name" placeholder="Name" required/> </p> 
+	<form action="registr.php" method="post">
+	<p id="login"> <input id="login1" type="text" name="login" placeholder="Login"/> </p> 
+			<p id="name"> <input id="name1" type="text" name="name" placeholder="Name"/> </p> 
 <p id="surname"> <input id="surname1" type="text" name="surname" placeholder="Surename"/> </p> 
 <p id="email"> <input id="email1" type="text" name="email" placeholder="Email"/> </p> 
 <p id="pas"> <input id="pas1" type="password" name="password" placeholder="Password"/> </p> 
 <p id="repas"> <input id="repas1" type="password" name="repassword" placeholder="Repeat Password"/> </p> 
-<button id="my_button" >Sign up</button>
+<input id="my_button" type="submit" value="Sing up" />
+</form>
+									<?php
+require_once 'connection.php'; // подключаем скрипт
+ 
+if(isset($_POST['login']) && isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['email'])  && isset($_POST['password'])){
+ 
+    // подключаемся к серверу
+    $link = mysqli_connect($host, $user, $password, $database) 
+        or die("Ошибка " . mysqli_error($link)); 
+     
+    // экранирования символов для mysql
+         $login= htmlentities(mysqli_real_escape_string($link, $_POST['login']));
+    $name = htmlentities(mysqli_real_escape_string($link, $_POST['name']));
+    $surname = htmlentities(mysqli_real_escape_string($link, $_POST['surname']));
+     $email = htmlentities(mysqli_real_escape_string($link, $_POST['email']));
+     $password = htmlentities(mysqli_real_escape_string($link, $_POST['password']));
+    // создание строки запроса
+    $query ="INSERT INTO account VALUES('$login','$password' , '$name' , '$surname', '$email')";
+     
+    // выполняем запрос
+    $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
+
+    // закрываем подключение
+    mysqli_close($link);
+}
+?>
 		</div>
 	<!--EOF FOOTER-->
 </body>

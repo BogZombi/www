@@ -134,7 +134,8 @@
 						<div class="recent_cars four_columns">
 							<h2><strong>Cars</strong> gallery</h2>
 							<ul>
-							<?php 
+							<?php  
+							// Підєднуємось до бази даних й витягуємо звідти табличку з машинами
 										require_once 'connection.php';
 										$link = mysqli_connect($host, $user, $password, $database) or die("Ошибка " . mysqli_error($link)); 
      
@@ -143,7 +144,7 @@
 										$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
 										if($result)
 										{
-   											$rows = mysqli_num_rows($result); // количество полученных строк
+   											$rows = mysqli_num_rows($result);
    											$number = 0;
      										for ($i = 0 ; $i < $rows ; ++$i){
 										    $row = mysqli_fetch_array($result);
@@ -177,17 +178,17 @@
 				<div class="services">
 					<div class="service service_1">
 						<h2><strong>Delivery</strong> on time</h2>
-						<p>Lorem ipsum dolo stet consectetur adipiscin elit. Vestibulu dictum, vulputate ullamcoper lorem ipsum dolo stet.</p>
+						<p>Borsch is the famous soup in many Russian families, as well as many Eastern and Central European countries.</p>
 						<a href="#" class="more">More</a>
 					</div>
 					<div class="service service_2 center">
 						<h2><strong>Quality</strong> service</h2>
-						<p>Lorem ipsum dolo stet consectetur adipiscin elit. Vestibulu dictum, vulputate ullamcoper lorem ipsum dolo stet.</p>
+						<p>Borsch is the famous soup in many Russian families, as well as many Eastern and Central European countries.</p>
 						<a href="#" class="more">More</a>
 					</div>
 					<div class="service service_3">
 						<h2><strong>Retro</strong> cars</h2>
-						<p>Lorem ipsum dolo stet consectetur adipiscin elit. Vestibulu dictum, vulputate ullamcoper lorem ipsum dolo stet.</p>
+						<p>Borsch is the famous soup in many Russian families, as well as many Eastern and Central European countries.</p>
 						<a href="#" class="more">More</a>
 					</div>
 				</div>
@@ -243,9 +244,9 @@
 									<img src="images/placeholders/180x135.gif" alt=""/>
 								</a>
 								<h5><a href="#">UNOFFICIAL PORSCHE 918 SPYDER PRICING POPS UP</a></h5>
-								<div class="date">November 1, 2012 </div>
+								<div class="date">May 1, 2018 </div>
 								<div class="post">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit... </p>
+									<p>Borsch is the famous soup... </p>
 								</div>
 							</div>
 							<div class="news_box bottom">
@@ -253,9 +254,9 @@
 									<img src="images/placeholders/180x135.gif" alt=""/>
 								</a>
 								<h5><a href="#">UNOFFICIAL PORSCHE 918 SPYDER PRICING POPS UP</a></h5>
-								<div class="date">November 1, 2012 </div>
+								<div class="date">May 1, 2018 </div>
 								<div class="post">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit... </p>
+									<p>Borsch is the famous soup... </p>
 								</div>
 							</div>
 							<div class="all_wrapper"><a href="#" class="all_news">All news</a></div>
@@ -273,8 +274,7 @@
 					<div class="f_widget first">
 						<h3><strong>About</strong> us</h3>
 						<a href="#" class="footer_logo">RangeAuto</a>
-						<p>Lorem ipsum dolor sit amet, cons ectetur adipisicing elit, sed do eiusmod tempor.
-Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eius  mod tempor incididunt ut.</p>
+						<p>Borsch is the famous soup in many Russian families, as well as many Eastern and Central European countries.</p>
 					</div>
 					<div class="f_widget divide second">
 						<h3><strong>Open</strong> hours</h3>
