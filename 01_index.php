@@ -535,12 +535,12 @@ mysqli_close($link);
 				<div class="top_footer">
 					<div class="f_widget first">
 						<h3><strong>About</strong> us</h3>
-						<a href="#" class="footer_logo">RangeAuto</a>
+						<a href="#" class="footer_logo">RagneAuto</a>
 						<p>Lorem ipsum dolor sit amet, cons ectetur adipisicing elit, sed do eiusmod tempor.
 Lorem ipsum dolor sit amet, con sectetur adipisicing elit, sed do eius  mod tempor incididunt ut.</p>
 					</div>
 					<div class="f_widget divide second">
-						<h3><strong>Open</strong> hours</h3>
+						<h3><strong>Open</strong> hours auction</h3>
 						<ul class="schedule">
 							<li>
 								<strong>Monday</strong>
